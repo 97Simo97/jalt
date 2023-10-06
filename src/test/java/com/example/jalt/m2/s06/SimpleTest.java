@@ -20,7 +20,7 @@ class SimpleTest {
      * Assert that a condition is true
      */
     @Test
-    void checkTrue() {
+    void isPositiveTrue() {
         boolean condition = simple.isPositive(12);
         assertTrue(condition);
     }
