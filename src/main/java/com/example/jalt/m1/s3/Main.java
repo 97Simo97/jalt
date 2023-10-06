@@ -44,6 +44,7 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
+    	int a = 0;
         System.out.println("This is a message to the user: hello!");
         log.finest("finest logging message");
         log.finer("finer logging message");
@@ -62,10 +63,11 @@ public class Main {
 
         System.out.println("Some risky code");
         try {
-            int x = 7 / 0;
+            int x = 7 / a;
             System.out.println("x = " + x);
         } catch (Exception ex) {
-            log.log(Level.SEVERE, "Cannot divide an integer by zero", ex);
+        	//log.severe("Cannot divide an integer by zero"+ ex);
+            log.log(Level.SEVERE, "Cannot divide an integer by zero", ex); //per loggare le eccezioni usare.log e non .info etc etc
             System.out.println("Sorry, something went wrong ...");
         }
     }
